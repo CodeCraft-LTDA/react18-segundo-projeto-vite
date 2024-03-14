@@ -9,6 +9,12 @@ const App = () => {
     alert(value);
   }
 
+  const handleClick2 = (e: MouseEvent) => {
+    //Interromper a propagação do evento
+    e.stopPropagation();
+    alert("e.clientX");
+  }
+
   return (
     <div>
       <h1>React 18</h1>
@@ -23,6 +29,12 @@ const App = () => {
 
       <div onClick={() => alert("clique div")} style={{border: "1px solid red"}}>
         <button onClick={() => alert("clique botao")}>
+          texto botao
+        </button>
+      </div>
+
+      <div onClick={() => alert("clique div")} style={{border: "1px solid red"}}>
+        <button onClick={()=>handleClick2}>
           texto botao
         </button>
       </div>
