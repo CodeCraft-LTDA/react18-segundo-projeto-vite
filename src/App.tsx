@@ -33,7 +33,7 @@ const App = () => {
         </button>
       </div>
 
-      <div onClick={() => alert("clique div")} style={{border: "1px solid red"}}>
+      <div onClickCapture={() => alert("clique div")} style={{border: "1px solid red"}}>
         <button onClick={()=>handleClick2}>
           texto botao
         </button>
