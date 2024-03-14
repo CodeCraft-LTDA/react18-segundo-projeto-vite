@@ -1,3 +1,4 @@
+import { FormEvent } from "react";
 import { Button } from "./components/Button";
 
 const App = () => {
@@ -13,6 +14,11 @@ const App = () => {
     //Interromper a propagação do evento
     e.stopPropagation();
     alert("e.clientX");
+  }
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    alert("Formulario enviado");
   }
 
   return (
@@ -37,6 +43,13 @@ const App = () => {
         <button onClick={()=>handleClick2}>
           texto botao
         </button>
+      </div>
+
+      <div>
+        <form action="" onSubmit={handleSubmit}>  
+          <input type="text" />
+          <button>Enviar</button>
+        </form>
       </div>
     </div>
   );
