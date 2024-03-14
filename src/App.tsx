@@ -19,6 +19,13 @@ const App = () => {
       <button onClick={() => handleClick("Teste")}>Aula 29</button>
 
       <Button label="Aula 30" onClick={() => handleClick("TEste")} />
+
+
+      <div onClick={() => alert("clique div")} style={{border: "1px solid red"}}>
+        <button onClick={() => alert("clique botao")}>
+          texto botao
+        </button>
+      </div>
     </div>
   );
 }
